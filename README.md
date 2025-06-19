@@ -1,4 +1,4 @@
-# Django Internship Assignment Project
+# Telegram Bot
 
 This project demonstrates a Django-based backend system with Django REST Framework, authentication, Celery for background task handling, and Telegram Bot integration.
 
@@ -16,24 +16,33 @@ This project demonstrates a Django-based backend system with Django REST Framewo
 ## Project Structure
 
 ```
-project_root/
+telegram_bot/
 │
-├── api/                      # Django app containing models, views, serializers
+├── api/                     
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
 │   ├── models.py
+│   ├── tasks.py
+│   ├── tests.py
+│   ├── urls.py
 │   ├── views.py
-│   ├── serializers.py
-│   └── urls.py
+│   └── migrations/
+│       └── __init__.py
+├── bot_env/ 
 │
 ├── telegram_bot/
-│   └── bot.py                # Telegram bot integration script
-│
-├── user_portal/              # Main Django project settings
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── celery.py
 │   ├── settings.py
-│   └── urls.py
+│   ├── urls.py
+│   └── wsgi.py
 │
 ├── requirements.txt
 ├── .env
 ├── manage.py
+├── bot.py
 └── README.md
 ```
 
